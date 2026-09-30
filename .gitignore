@@ -4,4 +4,5 @@ __pycache__/
 data/
 *.pyc
 .DS_Store
-informe/
+informe/*
+!informe/Informe_Taller02_Estefania_Gonzaga.pdf

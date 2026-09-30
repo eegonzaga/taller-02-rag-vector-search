@@ -49,7 +49,8 @@ para la abstención. La tabla sale de `resultados.csv` con `python tabla_metrica
 ├── parte3_rerank.py         Parte 3.C: reranking top-20 → top-k
 ├── tabla_metricas.py        Tablas del informe a partir de resultados.csv
 ├── resultados.csv           Crudo: una fila por consulta, k y tipo de recuperación
-└── salidas/                 Salidas crudas de cada parte (y de las corridas descartadas)
+├── salidas/                 Salidas crudas de cada parte (y de las corridas descartadas)
+└── informe/                 Informe en PDF
 ```
 
 ## Requisitos
