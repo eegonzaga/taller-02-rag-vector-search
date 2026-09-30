@@ -1,0 +1,20 @@
+golden set: 10 preguntas (8 respondibles, 2 negativas) · k = 3 · modelo BAAI/bge-m3
+Hit Rate@3 (respondibles): 0.625
+MRR (respondibles):          0.562
+abstención correcta:         1.000   (negativas)
+abstención indebida:         0.875   (respondibles)
+  adversarial  n=1  hit=0.000  mrr=0.000  abstuvo=0.000
+  multi-chunk  n=3  hit=1.000  mrr=0.833  abstuvo=1.000
+  negativo     n=2  hit=sin medir  mrr=sin medir  abstuvo=1.000
+  simple       n=4  hit=0.500  mrr=0.500  abstuvo=1.000
+filas crudas en resultados.csv
+golden set: 10 preguntas (8 respondibles, 2 negativas) · k = 5 · modelo BAAI/bge-m3
+Hit Rate@5 (respondibles): 0.750
+MRR (respondibles):          0.594
+abstención correcta:         1.000   (negativas)
+abstención indebida:         0.625   (respondibles)
+  adversarial  n=1  hit=0.000  mrr=0.000  abstuvo=0.000
+  multi-chunk  n=3  hit=1.000  mrr=0.833  abstuvo=1.000
+  negativo     n=2  hit=sin medir  mrr=sin medir  abstuvo=1.000
+  simple       n=4  hit=0.750  mrr=0.562  abstuvo=0.500
+filas crudas en resultados.csv

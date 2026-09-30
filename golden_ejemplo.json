@@ -1,0 +1,17 @@
+[
+  {"id": 1, "tipo": "simple", "pregunta": "¿Cuántos días de vacaciones puedo transferir al año siguiente?",
+   "respuesta_esperada": "Hasta un máximo de 5 días.", "documentos_fuente": ["nimbus_vacaciones.md"],
+   "fragmento_esperado": "transferirse al año siguiente hasta un máximo de 5 días", "criterio_exito": "recupera el fragmento y responde 5"},
+  {"id": 2, "tipo": "simple", "pregunta": "¿Cuál es el límite diario de alimentación en viajes?",
+   "respuesta_esperada": "45 USD.", "documentos_fuente": ["nimbus_gastos.md"], "fragmento_esperado": "45 USD", "criterio_exito": ""},
+  {"id": 3, "tipo": "simple", "pregunta": "¿Cuántos días por semana se permite el trabajo remoto?",
+   "respuesta_esperada": "Hasta 3 días por semana.", "documentos_fuente": ["nimbus_remoto.md"], "fragmento_esperado": "3 días por semana", "criterio_exito": ""},
+  {"id": 4, "tipo": "multi-chunk", "pregunta": "¿Qué trámites necesitan aprobación con 30 días de anticipación?",
+   "respuesta_esperada": "Trabajar desde el exterior (RR. HH.) y presentar facturas de gastos dentro de los 30 días.",
+   "documentos_fuente": ["nimbus_remoto.md", "nimbus_gastos.md"], "fragmento_esperado": "", "criterio_exito": ""},
+  {"id": 5, "tipo": "negativo", "pregunta": "¿Puedo llevar a mi mascota a la oficina?",
+   "respuesta_esperada": "El corpus no contiene información suficiente.", "documentos_fuente": [], "fragmento_esperado": "", "criterio_exito": "se abstiene"},
+  {"id": 6, "tipo": "negativo", "pregunta": "¿Qué dice el instructivo de prácticas de campo sobre el seguro de accidentes?",
+   "respuesta_esperada": "El corpus no contiene información suficiente.", "documentos_fuente": [], "fragmento_esperado": "",
+   "criterio_exito": "la respuesta ESTÁ en el PDF escaneado, que no se pudo indexar: el sistema debe abstenerse, y el análisis de fallos debe señalar la ingesta"}
+]

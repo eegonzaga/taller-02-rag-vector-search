@@ -1,0 +1,262 @@
+{
+  "_nota": "Transcrita del Anexo del enunciado del Taller 01 (generado el 2026-09-18). Si el profesor publica una version nueva de la tabla, reemplaza este archivo. Claves 'embeddings' y 'rerankers' transcritas del Anexo del enunciado del Taller 02 (generado el 2026-09-23).",
+  "semestre": "2026-1",
+  "models": [
+    {
+      "id": "propietario_grande",
+      "provider": "anthropic",
+      "model": "claude-opus-4-8",
+      "input_usd_per_1m": 5.0,
+      "output_usd_per_1m": 25.0,
+      "verified_at": "2026-07-10",
+      "env_var": "ANTHROPIC_API_KEY",
+      "parametros_expuestos": {
+        "temperature": "solo_valor_por_defecto",
+        "top_p": "solo_valor_por_defecto",
+        "top_k": "solo_valor_por_defecto",
+        "esfuerzo": {
+          "parametro": "output_config.effort",
+          "valores": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defecto": "high",
+          "contador": "usage.output_tokens_details.thinking_tokens"
+        }
+      }
+    },
+    {
+      "id": "propietario_balanceado",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "input_usd_per_1m": 3.0,
+      "output_usd_per_1m": 15.0,
+      "verified_at": "2026-07-10",
+      "env_var": "ANTHROPIC_API_KEY",
+      "parametros_expuestos": {
+        "temperature": "sin_verificar",
+        "top_p": "sin_verificar",
+        "top_k": "sin_verificar",
+        "esfuerzo": {
+          "parametro": "output_config.effort",
+          "valores": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "defecto": "high",
+          "contador": "usage.output_tokens_details.thinking_tokens"
+        }
+      }
+    },
+    {
+      "id": "propietario_economico",
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "input_usd_per_1m": 0.15,
+      "output_usd_per_1m": 0.6,
+      "verified_at": "2026-08-26",
+      "env_var": "OPENAI_API_KEY",
+      "parametros_expuestos": {
+        "temperature": "si",
+        "top_p": "si",
+        "top_k": "no",
+        "esfuerzo": null
+      }
+    },
+    {
+      "id": "openai_razonamiento",
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "input_usd_per_1m": 0.2,
+      "output_usd_per_1m": 1.2,
+      "verified_at": "2026-09-18",
+      "env_var": "OPENAI_API_KEY",
+      "parametros_expuestos": {
+        "temperature": "no_en_esta_fila",
+        "top_p": "no_en_esta_fila",
+        "top_k": "no",
+        "esfuerzo": {
+          "parametro": "reasoning.effort (Responses API) / reasoning_effort (Chat Completions)",
+          "valores": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defecto": "medium",
+          "contador": "usage.output_tokens_details.reasoning_tokens"
+        }
+      }
+    },
+    {
+      "id": "juez_economico",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "input_usd_per_1m": 1.0,
+      "output_usd_per_1m": 5.0,
+      "verified_at": "2026-07-10",
+      "env_var": "ANTHROPIC_API_KEY",
+      "parametros_expuestos": {
+        "temperature": "si",
+        "top_p": "si",
+        "top_k": "si",
+        "esfuerzo": null,
+        "contador_razonamiento": "usage.output_tokens_details.thinking_tokens"
+      }
+    },
+    {
+      "id": "open_weight_local",
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0,
+      "verified_at": null,
+      "env_var": null,
+      "parametros_expuestos": {
+        "temperature": "si",
+        "top_p": "si",
+        "top_k": "si",
+        "esfuerzo": null
+      }
+    },
+    {
+      "id": "base_local",
+      "provider": "huggingface",
+      "model": "openai-community/gpt2",
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0,
+      "verified_at": null,
+      "env_var": null,
+      "parametros_expuestos": {
+        "temperature": "si",
+        "top_p": "si",
+        "top_k": "si",
+        "esfuerzo": null
+      }
+    },
+    {
+      "id": "open_weight_pequeno",
+      "provider": "ollama",
+      "model": "qwen3:1.7b",
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0,
+      "verified_at": "2026-09-18",
+      "env_var": null,
+      "parametros_expuestos": {
+        "temperature": "si",
+        "top_p": "si",
+        "top_k": "si",
+        "esfuerzo": {
+          "parametro": "Ollama: think (bool) en /api/chat; transformers/vLLM: enable_thinking + thinking_budget (1-32768 tokens)",
+          "valores": [
+            "think=true/false",
+            "thinking_budget 1-32768"
+          ],
+          "defecto": "Ollama: think=false; transformers: thinking_budget=4000",
+          "contador": "campo thinking de /api/chat (Ollama); tramo <think>...</think> (transformers)"
+        }
+      }
+    },
+    {
+      "id": "open_weight_razonamiento",
+      "provider": "ollama",
+      "model": "gpt-oss:20b",
+      "input_usd_per_1m": 0.0,
+      "output_usd_per_1m": 0.0,
+      "verified_at": null,
+      "env_var": null,
+      "parametros_expuestos": {
+        "temperature": "si",
+        "top_p": "si",
+        "top_k": "si",
+        "esfuerzo": {
+          "parametro": "think (--think=low|medium|high; campo think en /api/chat)",
+          "valores": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "defecto": "medium",
+          "contador": "longitud en tokens del campo thinking de /api/chat"
+        }
+      }
+    }
+  ],
+  "embeddings": [
+    {
+      "id": "embed_local_rapido",
+      "provider": "sentence-transformers",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "dim": 384,
+      "max_seq_tokens": 128,
+      "multilingual": false,
+      "usd_per_1m": 0.0,
+      "verified_at": "2026-08-27"
+    },
+    {
+      "id": "embed_notebook_s2",
+      "provider": "sentence-transformers",
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "dim": 384,
+      "max_seq_tokens": 128,
+      "multilingual": true,
+      "usd_per_1m": 0.0,
+      "verified_at": "2026-08-27"
+    },
+    {
+      "id": "embed_local_multilingue",
+      "provider": "BAAI",
+      "model": "BAAI/bge-m3",
+      "dim": 1024,
+      "max_seq_tokens": 8192,
+      "multilingual": true,
+      "usd_per_1m": 0.0,
+      "verified_at": "2026-08-27"
+    },
+    {
+      "id": "embed_api_economico",
+      "provider": "openai",
+      "model": "text-embedding-3-small",
+      "dim": 1536,
+      "max_seq_tokens": 8192,
+      "multilingual": true,
+      "usd_per_1m": 0.02,
+      "verified_at": "2026-08-27"
+    },
+    {
+      "id": "embed_api_grande",
+      "provider": "openai",
+      "model": "text-embedding-3-large",
+      "dim": 3072,
+      "max_seq_tokens": 8192,
+      "multilingual": true,
+      "usd_per_1m": 0.13,
+      "verified_at": "2026-08-27"
+    }
+  ],
+  "rerankers": [
+    {
+      "id": "rerank_local_ingles",
+      "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "trained_on": "MS MARCO Passage Ranking (ingles)",
+      "multilingual": false,
+      "published": "ndcg at 10 trec dl 2019 = 74.3 · mrr at 10 msmarco dev = 39.01",
+      "verified_at": "2026-09-19"
+    },
+    {
+      "id": "rerank_local_multilingue",
+      "model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "trained_on": "mMARCO: MS MARCO traducido automaticamente a 14 idiomas (Google Translate)",
+      "multilingual": true,
+      "published": null,
+      "verified_at": "2026-09-19"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "tipo": "simple",
+    "pregunta": "REEMPLAZAR: pregunta con respuesta en un solo fragmento",
+    "respuesta_esperada": "REEMPLAZAR: respuesta correcta según el documento fuente",
+    "documentos_fuente": ["REEMPLAZAR.pdf"],
+    "fragmento_esperado": "REEMPLAZAR: una frase LITERAL del documento donde está la respuesta (el acierto exige que el fragmento recuperado la contenga; déjala vacía para aceptar cualquier fragmento del documento)",
+    "criterio_exito": "El sistema recupera un fragmento del documento fuente que contiene la frase y responde sin agregar información externa."
+  },
+  {
+    "id": 2,
+    "tipo": "simple",
+    "pregunta": "",
+    "respuesta_esperada": "",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": ""
+  },
+  {
+    "id": 3,
+    "tipo": "simple",
+    "pregunta": "",
+    "respuesta_esperada": "",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": ""
+  },
+  {
+    "id": 4,
+    "tipo": "multi-chunk",
+    "pregunta": "REEMPLAZAR: pregunta que requiere combinar varias partes del corpus",
+    "respuesta_esperada": "REEMPLAZAR: respuesta que sintetiza varias fuentes",
+    "documentos_fuente": ["doc1.pdf", "doc2.pdf"],
+    "fragmento_esperado": "",
+    "criterio_exito": "El sistema recupera al menos un fragmento de alguno de los documentos fuente en el top-k y cita ambas fuentes en la respuesta."
+  },
+  {
+    "id": 5,
+    "tipo": "multi-chunk",
+    "pregunta": "",
+    "respuesta_esperada": "",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": ""
+  },
+  {
+    "id": 6,
+    "tipo": "multi-chunk",
+    "pregunta": "",
+    "respuesta_esperada": "",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": ""
+  },
+  {
+    "id": 7,
+    "tipo": "negativo",
+    "pregunta": "REEMPLAZAR: pregunta cuya respuesta NO está en el corpus",
+    "respuesta_esperada": "El corpus no contiene información suficiente.",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": "No hay nada que recuperar: no entra en el Hit Rate ni en el MRR. Lo que se mide es si el sistema se abstiene (tasa de abstención correcta)."
+  },
+  {
+    "id": 8,
+    "tipo": "negativo",
+    "pregunta": "",
+    "respuesta_esperada": "El corpus no contiene información suficiente.",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": "No hay nada que recuperar: no entra en el Hit Rate ni en el MRR. Lo que se mide es si el sistema se abstiene (tasa de abstención correcta)."
+  },
+  {
+    "id": 9,
+    "tipo": "adversarial",
+    "pregunta": "REEMPLAZAR: pregunta que intenta forzar al sistema a ignorar el contexto (una instrucción dentro de la pregunta)",
+    "respuesta_esperada": "REEMPLAZAR: la respuesta anclada en el corpus, ignorando la instrucción",
+    "documentos_fuente": ["REEMPLAZAR.pdf"],
+    "fragmento_esperado": "",
+    "criterio_exito": "Es RESPONDIBLE si tiene documento fuente: cuenta en Hit Rate y MRR, y lo que se juzga es que la respuesta ignore la instrucción maliciosa. Si prefieres que el sistema se abstenga, deja documentos_fuente vacío y contará como negativa. Decide y dilo en el informe."
+  },
+  {
+    "id": 10,
+    "tipo": "simple",
+    "pregunta": "",
+    "respuesta_esperada": "",
+    "documentos_fuente": [],
+    "fragmento_esperado": "",
+    "criterio_exito": ""
+  }
+]

@@ -1,0 +1,36 @@
+/Users/estefania.gonzaga/Documents/Personal/Master-USFQ-Classes/AIGenerativa&Agentes/Semana2/taller-02-Estefania-Gonzaga/Lab-02-RAG-VectorSearch/parte3_rerank.py:36: DeprecationWarning: The `max_length` property was renamed and is now deprecated. Please use `max_seq_length` instead.
+  self.tope_reranker = int(self.reranker.max_length or 512)
+reranker: fila rerank_local_ingles · cross-encoder/ms-marco-MiniLM-L6-v2 · verified_at 2026-09-19 · tope 512 tokens · candidatos 20 → top-3
+pares truncados por el cross-encoder: 172/400
+Hit Rate@3 (respondibles): 0.875
+MRR (respondibles):          0.729
+abstención correcta:         1.000   (negativas)
+abstención indebida:         0.625   (respondibles)
+  id=1  simple       posicion=3  abstuvo=True
+  id=2  simple       posicion=1  abstuvo=False
+  id=3  simple       posicion=2  abstuvo=True
+  id=4  simple       posicion=1  abstuvo=True
+  id=5  multi-chunk  posicion=1  abstuvo=True
+  id=6  multi-chunk  posicion=1  abstuvo=True
+  id=7  multi-chunk  posicion=1  abstuvo=False
+  id=8  negativo     posicion=None  abstuvo=True
+  id=9  negativo     posicion=None  abstuvo=True
+  id=10 adversarial  posicion=None  abstuvo=False
+/Users/estefania.gonzaga/Documents/Personal/Master-USFQ-Classes/AIGenerativa&Agentes/Semana2/taller-02-Estefania-Gonzaga/Lab-02-RAG-VectorSearch/parte3_rerank.py:36: DeprecationWarning: The `max_length` property was renamed and is now deprecated. Please use `max_seq_length` instead.
+  self.tope_reranker = int(self.reranker.max_length or 512)
+reranker: fila rerank_local_ingles · cross-encoder/ms-marco-MiniLM-L6-v2 · verified_at 2026-09-19 · tope 512 tokens · candidatos 20 → top-5
+pares truncados por el cross-encoder: 172/400
+Hit Rate@5 (respondibles): 0.875
+MRR (respondibles):          0.729
+abstención correcta:         1.000   (negativas)
+abstención indebida:         0.375   (respondibles)
+  id=1  simple       posicion=3  abstuvo=True
+  id=2  simple       posicion=1  abstuvo=False
+  id=3  simple       posicion=2  abstuvo=False
+  id=4  simple       posicion=1  abstuvo=False
+  id=5  multi-chunk  posicion=1  abstuvo=True
+  id=6  multi-chunk  posicion=1  abstuvo=True
+  id=7  multi-chunk  posicion=1  abstuvo=False
+  id=8  negativo     posicion=None  abstuvo=True
+  id=9  negativo     posicion=None  abstuvo=True
+  id=10 adversarial  posicion=None  abstuvo=False

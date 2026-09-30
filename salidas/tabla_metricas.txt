@@ -1,0 +1,5 @@
+recuperación                                          k HitRate@k    MRR abst.correcta abst.indebida  n(resp/neg)
+denso                                                 3     0.625  0.562         1.000         0.875  8/2
+denso                                                 5     0.750  0.594         1.000         0.625  8/2
+rerank:cross-encoder/ms-marco-MiniLM-L6-v2@20         3     0.875  0.729         1.000         0.625  8/2
+rerank:cross-encoder/ms-marco-MiniLM-L6-v2@20         5     0.875  0.729         1.000         0.375  8/2

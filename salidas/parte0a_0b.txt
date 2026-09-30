@@ -1,0 +1,18 @@
+AVISO ingesta: chunk_tokens=900 supera el tope del modelo (128 tokens): lo que pase de 126 tokens no llega al índice —el MiniLM lo trunca en silencio; la H200 rechaza la petición—.
+AVISO ingesta: instructivo_escaneado.pdf: 0 caracteres útiles en 2 página(s). ¿Escaneado o fotografiado? NO se indexa: sin texto no hay nada que recuperar (OCR aparte).
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1660 > 128). Running this sequence through the model will result in indexing errors
+============================== 0.a — sin la comprobación de load_corpus ==============================
+read_document: 2 página(s), useful_chars=0, parece_escaneado=True
+texto extraído (repr): '[page=1]\n\n[page=2]'
+fragmentos que se habrían indexado: 1 → ['[page=1] [page=2]']
+caracteres útiles de ese fragmento: [0] (ninguna excepción lanzada)
+
+============================== 0.b — el fragmento que se corta a 128 ==============================
+ingesta: nimbus_gastos.md: 1 página(s), 294 caracteres útiles → 1 fragmento(s)
+ingesta: nimbus_remoto.md: 1 página(s), 296 caracteres útiles → 1 fragmento(s)
+ingesta: nimbus_vacaciones.md: 1 página(s), 363 caracteres útiles → 1 fragmento(s)
+fragmentos: 3 (chunk_tokens pedido = 900)
+texto: 900 palabras de lewis-2020-rag.pdf
+tokens del texto (tokenizador del modelo): 1660
+max_seq_length del modelo: 128  → llegan al vector 126 tokens de contenido (7.6% del texto)
+coseno(vector del texto entero, vector del texto recortado a 126 tokens) = 1.000000

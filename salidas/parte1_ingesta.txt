@@ -1,0 +1,20 @@
+embeddings: fila embed_local_multilingue · BAAI/bge-m3 · verified_at 2026-08-27 · tope 8192 tokens
+Qdrant http://localhost:6333 · colección mmia6013_rag · chunk_tokens=512 overlap_tokens=128
+ingesta: bai-2022-constitutional-ai.pdf: 34 página(s), 94294 caracteres útiles → 80 fragmento(s)
+ingesta: blei-2003-lda.pdf: 30 página(s), 59953 caracteres útiles → 61 fragmento(s)
+ingesta: brown-2020-gpt3.pdf: 75 página(s), 186342 caracteres útiles → 166 fragmento(s)
+ingesta: doersch-2016-tutorial-vae.pdf: 23 página(s), 36740 caracteres útiles → 36 fragmento(s)
+ingesta: edge-2024-graphrag.pdf: 26 página(s), 70385 caracteres útiles → 63 fragmento(s)
+ingesta: es-2023-ragas.pdf: 8 página(s), 25583 caracteres útiles → 22 fragmento(s)
+ingesta: gao-2023-rag-survey.pdf: 21 página(s), 86641 caracteres útiles → 83 fragmento(s)
+ingesta: kingma-2013-vae.pdf: 14 página(s), 31786 caracteres útiles → 33 fragmento(s)
+ingesta: lewis-2020-rag.pdf: 19 página(s), 55094 caracteres útiles → 50 fragmento(s)
+ingesta: ng-jordan-2001-discriminative-vs-generative.pdf: 8 página(s), 18996 caracteres útiles → 20 fragmento(s)
+ingesta: ouyang-2022-instructgpt.pdf: 68 página(s), 143167 caracteres útiles → 126 fragmento(s)
+ingesta: rafailov-2023-dpo.pdf: 27 página(s), 71700 caracteres útiles → 70 fragmento(s)
+ingesta: rag-anything-2025.pdf: 18 página(s), 57304 caracteres útiles → 44 fragmento(s)
+ingesta: reimers-2019-sentence-bert.pdf: 11 página(s), 35133 caracteres útiles → 33 fragmento(s)
+ingesta: vaswani-2017-attention-is-all-you-need.pdf: 15 página(s), 31566 caracteres útiles → 27 fragmento(s)
+ingesta: wei-2022-chain-of-thought.pdf: 43 página(s), 105503 caracteres útiles → 96 fragmento(s)
+indexados 1010 fragmentos de 16 documento(s) en 28.3 s
+

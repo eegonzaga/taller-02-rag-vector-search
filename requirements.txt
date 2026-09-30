@@ -1,0 +1,16 @@
+# Versiones exactas con las que se corrió el Taller 02 (2026-09-27, Python 3.12, uv).
+# Mínimos originales del lab (2026-09-19): qdrant-client>=1.12 (search → query_points).
+qdrant-client==1.19.1
+sentence-transformers==6.1.0   # MiniLM de la Parte 0 y cross-encoder de la Parte 3.C
+transformers==5.17.0           # tokenizador de bge-m3 (CodificadorH200); faltaba en la lista
+torch==2.14.0
+tiktoken==0.14.0               # tokenizador de los embeddings de OpenAI
+numpy==2.5.3
+pypdf==6.19.0
+python-dotenv==1.2.3
+openai==3.19.2
+anthropic==1.8.0
+rank-bm25==0.2.2
+ragas==0.3.1
+# Servicios externos (no pip): Qdrant 1.19.1 en Docker (qdrant/qdrant) · Ollama 0.34.2 con
+# qwen3:1.7b (generación) · bge-m3:latest servido por el Ollama de la H200 (VPN GlobalProtect).
